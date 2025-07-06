@@ -1,12 +1,22 @@
-# React + Vite
+🚗 Carmium – Premium Car Rental Web App
+Welcome to Carmium, a modern and animated web application for luxury car rentals. This project focuses on a clean UI, scroll-based animations using GSAP + ScrollTrigger, and responsive design built with React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+✨ Features
+🏎️ Premium Car Listings with image logos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎞️ Animated Car Transitions (Front → Side → Rear) using scroll
 
-## Expanding the ESLint configuration
+📱 Responsive design for all devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Smooth scroll-triggered animations with GSAP
+
+🧭 Sticky navigation with entry animations
+
+📸 Background branding image layered behind main car
+
+Tech	Description
+React	Front-end framework
+GSAP	Animation library
+ScrollTrigger	GSAP plugin for scroll interactions
+HTML/CSS	Markup and styling
