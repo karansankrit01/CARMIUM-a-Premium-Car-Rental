@@ -129,13 +129,13 @@ Audi' /></li>
                     <li><img className='car-logo' src='bugatti.jpeg' alt='Bugatti' /></li>
                 </ul>
             </div>
-            <div className="car-scroll-section">
-  <div>
-    <img className="car-image" id="front-img" src="front.png" alt="Porsche Front" />
-    <img className="car-image" id="side-img" src="side.png" alt="Porsche Side" />
-    <img className="car-image" id="rear-img" src="rear.png" alt="Porsche Rear" />
-  </div>
-</div>
+            {/* <div className="car-scroll-section">
+                <div>
+                    <img className="car-image" id="front-img" src="front.png" alt="Porsche Front" />
+                    <img className="car-image" id="side-img" src="side.png" alt="Porsche Side" />
+                    <img className="car-image" id="rear-img" src="rear.png" alt="Porsche Rear" />
+                </div>
+            </div> */}
 
 
         </>

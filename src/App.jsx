@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import Navbar from './Components/Navbar'
 import './App.css'
 import Home from './Components/Home';
-import Page1 from './Components/pages/page1';
+import Page1 from './Components/pages/Page1';
+import MouseFollower from './Components/MouseFollwer';
 
 
 gsap.registerPlugin(useGSAP);
@@ -15,7 +16,8 @@ const App = () => {
     <div>
       <Navbar/>
       <Home/>
-      <Page1/>
+      <Page1 />
+      <MouseFollower/>
     </div>
   )
 }
