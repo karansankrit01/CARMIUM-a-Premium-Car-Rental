@@ -15,9 +15,9 @@ function MouseFollower() {
   return (
     <div
       style={{
-        position: "absolute",
-        top: pos.y,
-        left: pos.x,
+        position: "fixed", // changed to fixed
+        top: pos.y - 15,   // center the follower
+        left: pos.x - 15,
         width: 30,
         height: 30,
         backgroundImage: "url('/car.png')",
@@ -26,6 +26,7 @@ function MouseFollower() {
         transition: "all cubic-bezier(0.19, 1, 0.22, 1) 1s",
         borderRadius: "50%",
         pointerEvents: "none",
+        zIndex: 9999, // ensure it's on top
       }}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}

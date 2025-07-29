@@ -180,37 +180,82 @@
 /* page 1 css */
 
 .page1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
-
-  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  padding: 130px 20px;
+  font-family: 'Arial', sans-serif;
 }
+
 .para {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #00000082;
-  text-align: center;
+  font-size: 14px;
+  color: gray;
   text-transform: uppercase;
-  
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
+
 .page1_heading {
-  z-index: 10;
-  margin-top: -500px;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
+
 .paragraph {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000cd;
-  text-align: center;
-  margin-top: 15px;
-  max-width: 600px;
-  user-select: none;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.button-wrapper {
+  margin-top: 40px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fleet-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fleet-btn:hover {
+  background-color: #ddd;
+}
+
+.fleet-btn.active {
+  background-color: #000;
+  color: white;
+}
+
+.vehicles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.vehicle img {
+  width: 320px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vehicle img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

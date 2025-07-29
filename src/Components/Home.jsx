@@ -12,32 +12,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
     useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".car-scroll-section",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-                pin: true, // Keeps the section fixed during animation
-            },
-        });
+        // const tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".car-scroll-section",
+        //         start: "top top",
+        //         end: "bottom top",
+        //         scrub: true,
+        //         pin: true, // Keeps the section fixed during animation
+        //     },
+        // });
 
-        tl.set("#front-img", { opacity: 1, zIndex: 3 })
-            .set("#side-img", { opacity: 0, zIndex: 2 })
-            .set("#rear-img", { opacity: 0, zIndex: 1 })
+        // tl.set("#front-img", { opacity: 1, zIndex: 3 })
+        //     .set("#side-img", { opacity: 0, zIndex: 2 })
+        //     .set("#rear-img", { opacity: 0, zIndex: 1 })
 
-            .to("#front-img", { opacity: 0, duration: .5 }, 0)
-            .to("#side-img", { opacity: 1, duration: .6 }, 0)
+        //     .to("#front-img", { opacity: 0, duration: .5 }, 0)
+        //     .to("#side-img", { opacity: 1, duration: .6 }, 0)
 
-            .to("#side-img", { opacity: 0, duration: 1 }, 0.1)  // hide side
-            .to("#rear-img", { opacity: 1, duration: 1 }, 0.2);  // show rear
+        //     .to("#side-img", { opacity: 0, duration: 1 }, 0.1)  // hide side
+        //     .to("#rear-img", { opacity: 1, duration: 1 }, 0.2);  // show rear
 
-        ScrollTrigger.create({
-            trigger: '.home-container',
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: true,
-        });
+        // ScrollTrigger.create({
+        //     trigger: '.home-container',
+        //     start: 'top top',
+        //     end: 'bottom bottom',
+        //     scrub: true,
+        // });
         gsap.from('.home-title', {
 
             y: -100,
