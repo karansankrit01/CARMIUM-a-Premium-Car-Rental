@@ -45,6 +45,9 @@ const Page1 = () => {
           
           
         </div>
+        <div className="show-all-button">
+            Show All (83 Models)
+          </div>
       </div>
     </>
   );

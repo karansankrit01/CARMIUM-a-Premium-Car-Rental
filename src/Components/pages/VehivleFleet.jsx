@@ -1,30 +1,74 @@
-import React, { useEffect } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const VehicleFleet = () => {
-  useEffect(() => {
-    // Set initial state to visible
-    gsap.set('.fleet-section', { opacity: 1, y: 0 });
-    
-    gsap.from('.fleet-section', {
+   useEffect(() => {
+    const sectionRef = useRef(null);
+    const filtersRef = useRef(null);
+    const gridRef = useRef(null);   
+    gsap.from(sectionRef.current, {
       scrollTrigger: {
-        trigger: '.fleet-section',
+        trigger: sectionRef.current,
         start: 'top 80%',
         toggleActions: 'play none none reverse',
       },
       y: 100,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       ease: 'power3.out',
     });
+    gsap.set(sectionRef.current, { opacity: 1, y: 0 });
+    gsap.from(filtersRef.current, {
+      scrollTrigger: {
+        trigger: filtersRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.out',
+    });
+    gsap.set(filtersRef.current, { opacity: 1, y: 0 });
+    gsap.from(gridRef.current, {
+      scrollTrigger: {
+        trigger: gridRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power3.out',
+    });
+    gsap.set(gridRef.current, { opacity: 1, y: 0 });  
+  }, [sectionRef, filtersRef, gridRef]); // Ensure refs are used in the effect    
+    useEffect(() => {
+        gsap.utils.toArray('.fleet-car-img').forEach((img) => {
+            gsap.from(img, {
+                scrollTrigger: {
+                    trigger: img,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
+                },
+                y: 100,
+                opacity: 0,
+                duration: 0.5,
+                ease: 'power3.out',
+            });
+            gsap.set(img, { opacity: 1, y: 0 });
+        });
   }, []);
 
   return (
-    <section className="fleet-section" style={{ padding: '20px', maxWidth: '1200px', width: '100%' }}>
+    <section
+      className="fleet-section"
+      ref={sectionRef}
+      style={{ padding: '20px', maxWidth: '1200px', width: '100%' }}
+    >
       <p className="fleet-subtitle">ONLY THE BEST CARS</p>
       <h2 className="fleet-title">Our Vehicle Fleet</h2>
       <p className="fleet-description">
@@ -33,7 +77,7 @@ const VehicleFleet = () => {
         That’s why we have only world-class cars in our fleet.
       </p>
 
-      <div className="fleet-filters">
+      <div className="fleet-filters" ref={filtersRef}>
         <button className="fleet-tag">Premium</button>
         <button className="fleet-tag">Coupe</button>
         <button className="fleet-tag">Hypercars</button>
@@ -42,7 +86,7 @@ const VehicleFleet = () => {
         <button className="fleet-tag">Limousines</button>
       </div>
 
-      <div className="fleet-grid">
+      <div className="fleet-grid" ref={gridRef}>
         <img src="/porsche.jpeg" alt="Silver Porsche sports car parked in a modern showroom with bright lighting and a clean, luxurious atmosphere" className="fleet-car-img" />
         <img src="/ferrari.jpeg" alt="Red Ferrari coupe displayed in a sleek indoor environment with polished floors and an upscale, energetic mood" className="fleet-car-img" />
         <img src="/lambo.jpeg" alt="White Lamborghini hypercar positioned under spotlights in a high-end garage setting, evoking excitement and exclusivity" className="fleet-car-img" />
