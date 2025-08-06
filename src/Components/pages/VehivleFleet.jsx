@@ -74,7 +74,7 @@ const VehicleFleet = () => {
       <p className="fleet-description">
         We provide our customers with the most incredible driving emotions.
         <br />
-        That’s why we have only world-class cars in our fleet.
+        That's why we have only world-class cars in our fleet.
       </p>
 
       <div className="fleet-filters" ref={filtersRef}>

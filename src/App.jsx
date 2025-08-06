@@ -7,6 +7,9 @@ import Home from './Components/Home';
 import Page1 from './Components/pages/Page1';
 import MouseFollower from './Components/MouseFollwer';
 import Feature from './Components/pages/Feature';
+import Footer from './Components/pages/Footer';
+
+
 
 
 gsap.registerPlugin(useGSAP);
@@ -20,6 +23,7 @@ const App = () => {
       <Page1 />
       <MouseFollower/>
       <Feature/>
+      <Footer/>
     </div>
   )
 }

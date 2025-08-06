@@ -1,68 +1,74 @@
 import React from 'react'
-import { useGSAP } from '@gsap/react';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// Importing GSAP and ScrollTrigger
-// Importing the Navbar CSS for styling 
-
-
-
-import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 const Navbar = () => {
   useGSAP(() => {
+    // Set initial visibility to ensure elements are visible
+    gsap.set('.navbar-item, .download-button', { opacity: 1, visibility: 'visible' });
+
+    // Create a timeline for better control
+    const tl = gsap.timeline();
+
+    // Animate navbar on mount
+    tl.from('.navbar', {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+
+    // Animate logo
+    tl.from('.logo', {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+      ease: 'back.out(1.5)'
+    }, '-=0.8');
+
+    // Animate nav items with stagger
+    tl.from('.navbar-item', {
+      y: -30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'back.out(1.5)'
+    }, '-=0.6');
+
+    // Animate Book Now button
+    tl.from('.download-button', {
+      y: -30,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'back.out(1.5)'
+    }, '-=0.4');
+
+    // Ensure all elements are visible after timeline completes
+    tl.set('.navbar-item, .download-button', { opacity: 1, visibility: 'visible' });
+
+    // Sticky effect on scroll
     ScrollTrigger.create({
       trigger: '.navbar',
       start: 'top top',
       end: 'bottom top',
-      toggleClass: { targets: '.navbar', className: 'active' },
+      toggleClass: { targets: '.navbar', className: 'active' }
     });
-    gsap.from('.logo', {
-      y: -100,
-      opacity: 0,
-      duration: 1
-    })
-    gsap.from('.navbar', {
-      y: -100,
-      opacity: 0,
-      duration: 1
-
-    })
-    gsap.to('.navbar', {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: 'back.out(1.5)'
-
-    })
-    gsap.from('.navbar-list li', {
-      y: -50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'back.out(1.5)'
-    })
-    gsap.fromTo('.download-button',
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: 'back.out(1.5)' }
-    );
-
   }, []);
 
   return (
-    <div>
-      <nav className='navbar'>
-        <h1 className='logo'>Carmium</h1>
-        <ul className='navbar-list'>
-          <li className='navbar-item'>Home</li>
-          <li className='navbar-item'>About us</li>
-          <li className='navbar-item'>Cars</li>
-          <li className='navbar-item'>Futures</li>
-          <li className='navbar-item'>Help</li>
-        </ul>
-        <button className='download-button'>Book Now</button>
-      </nav>
-    </div>
+    <nav className='navbar'>
+      <h1 className='logo'>Carmium</h1>
+      <ul className='navbar-list'>
+        <li className='navbar-item'>About Us</li>
+        <li className='navbar-item'>Cars</li>
+        <li className='navbar-item'>Futures</li>
+        <li className='navbar-item'>Help</li>
+      </ul>
+      <button className='download-button'>Book Now</button>
+    </nav>
   )
 }
 
