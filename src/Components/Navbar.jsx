@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -60,11 +61,15 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <h1 className='logo'>Carmium</h1>
+      <h1 className='logo'>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 600 }}>Carmium</Link>
+      </h1>
       <ul className='navbar-list'>
-        <li className='navbar-item'>About Us</li>
+        <li className='navbar-item'>
+          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }}>About Us</Link>
+        </li>
         <li className='navbar-item'>Cars</li>
-        <li className='navbar-item'>Futures</li>
+        {/* <li className='navbar-item'>Features</li> */}
         <li className='navbar-item'>Help</li>
       </ul>
       <button className='download-button'>Book Now</button>

@@ -1,37 +1,40 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar'
-import './App.css'
+import Navbar from './Components/Navbar';
+import './App.css';
 import Home from './Components/Home';
 import Page1 from './Components/pages/Page1';
 import MouseFollower from './Components/MouseFollwer';
 import Feature from './Components/pages/Feature';
 import Footer from './Components/pages/Footer';
 import ShowAll from './ShowAll';
+import Aboutpage1 from './Components/Aboutus/Aboutpage1'; // Make sure this import exists
 
 gsap.registerPlugin(useGSAP);
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Navbar/>
-        <Routes>
-          <Route path="/" element={
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
             <>
-              <Home/>
+              <Home />
               <Page1 />
-              <MouseFollower/>
-              <Feature/>
-              <Footer/>
+              <MouseFollower />
+              <Feature />
+              <Footer />
             </>
-          } />
-          <Route path="/show-all" element={<ShowAll />} />
-        </Routes>
-      </div>
+          }
+        />
+        <Route path="/about" element={<Aboutpage1 />} />
+        <Route path="/show-all" element={<ShowAll />} />
+      </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

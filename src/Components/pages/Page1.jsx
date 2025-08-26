@@ -49,7 +49,7 @@ const Page1 = () => {
           </div>
         </div>
         <div className="show-all-button" onClick={handleShowAllClick}>
-          Show All (83 Models)
+          Show All (83 Models) &rarr;
         </div>
       </div>
     </>

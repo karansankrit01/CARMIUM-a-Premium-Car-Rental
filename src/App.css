@@ -14,15 +14,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 120px;
+  padding: 5px 100px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000; /* Ensure navbar is above other content */
   gap: 40px;
 }
-
-
+  
 /* 
 .navbar h1 {
   font-weight: 600;
@@ -35,7 +34,7 @@ body {
 
 .logo {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #000000;
   margin: 0;
   flex-shrink: 0;
@@ -69,7 +68,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
-  color: #000000 !important;
+  color: #000000;
   font-weight: 500;
   opacity: 1 !important;
   visibility: visible !important;
@@ -79,8 +78,8 @@ body {
 }
 
 .navbar-item:hover {
-  color: #000000;
-  scale: 1.05;
+  color: #000000bc;
+  transform: scale(1.05);
 }
 
 /* .navbar-list li a {
@@ -89,22 +88,14 @@ body {
 } */
 
 .download-button{
-  background-color: #000000;
-  color: #ffffff;
+  margin-top: 40px;
+  font-size: 10px;
   padding: 12px 20px;
-  border-radius: 25px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  margin: 25px  0 0 0; /* Adjust margin to account for fixed navbar */
-  opacity: 1 !important;
-  visibility: visible !important;
-  font-family: 'Manrope', sans-serif;
-  line-height: 1;
-  
-  
 }
 
 .download-button:hover {
@@ -183,7 +174,7 @@ body {
   max-width: 500px;
 }
 .home-title {
-  font-size: 80px;
+  font-size: 85px;
   margin-top: -200px;
   font-weight: 800;
   line-height: 1.2;
@@ -606,3 +597,89 @@ input[type='text']:focus {
 }
 
 
+.About-container {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.About-container h1 {
+  font-size: 100px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-style: italic;
+}
+h3{
+  margin-top: 50px;
+  font-size: 10px;
+  color: #777;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.About-container img {
+  max-width: 15%;
+  height: auto;
+  margin-top: 10px;
+  
+
+}
+.about{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+
+}
+.mission {
+  width: 100%;                 
+  overflow: hidden;            
+  white-space: nowrap;         
+  box-sizing: border-box;
+}
+.mission-title{
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  color: black;
+  letter-spacing: 1.5px;
+  
+}
+
+.mission-statement span {
+  background-color: yellow;
+  font-size:60px;
+  display: inline-block;
+  padding-left: 100%;           /* starts text off-screen */
+  animation: marquee 20s linear infinite;
+  /* Add any additional styles for the scrolling effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.vision-statement span {
+  background-color: lightblue;
+  font-size:60px;
+  display: inline-block;
+  padding-left: 100%;           /* starts text off-screen */
+  animation: marq 20s linear infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes marq {
+  100%   { transform: translateX(0%); }
+  0% { transform: translateX(-100%); }
+}

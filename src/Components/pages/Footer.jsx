@@ -1,6 +1,10 @@
+import { useGSAP } from '@gsap/react'
 import React from 'react'
 
 const Footer = () => {
+  useGSAP(()=>{
+      
+  });
   return (
     <>
       <div className="img-section">
