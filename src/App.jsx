@@ -10,6 +10,7 @@ import Feature from './Components/pages/Feature';
 import Footer from './Components/pages/Footer';
 import ShowAll from './ShowAll';
 import Aboutpage1 from './Components/Aboutus/Aboutpage1'; // Make sure this import exists
+import ShowVehicle from './Components/cars/ShowVehicle';
 
 gsap.registerPlugin(useGSAP);
 
@@ -31,6 +32,7 @@ const App = () => {
           }
         />
         <Route path="/about" element={<Aboutpage1 />} />
+        <Route path="/cars" element={<ShowVehicle/>} />
         <Route path="/show-all" element={<ShowAll />} />
       </Routes>
     </Router>

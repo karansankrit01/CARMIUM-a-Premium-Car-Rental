@@ -1,5 +1,7 @@
+import LocomotiveScroll from 'locomotive-scroll';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 
 const Page1 = () => {
   const navigate = useNavigate();

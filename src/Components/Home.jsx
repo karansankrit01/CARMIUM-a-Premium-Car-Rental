@@ -2,7 +2,8 @@ import React from 'react'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import VehicleFleet from './pages/vehivlefleet';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -136,8 +137,6 @@ Audi' /></li>
                     <img className="car-image" id="rear-img" src="rear.png" alt="Porsche Rear" />
                 </div>
             </div> */}
-
-
         </>
     )
 }

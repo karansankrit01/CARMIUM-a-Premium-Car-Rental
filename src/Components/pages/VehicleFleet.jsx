@@ -1,14 +1,15 @@
-import React, { use, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const VehicleFleet = () => {
-   useEffect(() => {
-    const sectionRef = useRef(null);
-    const filtersRef = useRef(null);
-    const gridRef = useRef(null);   
+  const sectionRef = useRef(null);
+  const filtersRef = useRef(null);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
     gsap.from(sectionRef.current, {
       scrollTrigger: {
         trigger: sectionRef.current,
@@ -45,7 +46,7 @@ const VehicleFleet = () => {
       ease: 'power3.out',
     });
     gsap.set(gridRef.current, { opacity: 1, y: 0 });  
-  }, [sectionRef, filtersRef, gridRef]); // Ensure refs are used in the effect    
+  }, []);
     useEffect(() => {
         gsap.utils.toArray('.fleet-car-img').forEach((img) => {
             gsap.from(img, {

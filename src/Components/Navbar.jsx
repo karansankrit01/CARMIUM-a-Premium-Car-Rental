@@ -8,13 +8,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Navbar = () => {
   useGSAP(() => {
-    // Set initial visibility to ensure elements are visible
     gsap.set('.navbar-item, .download-button', { opacity: 1, visibility: 'visible' });
 
-    // Create a timeline for better control
     const tl = gsap.timeline();
 
-    // Animate navbar on mount
     tl.from('.navbar', {
       y: -100,
       opacity: 0,
@@ -22,7 +19,6 @@ const Navbar = () => {
       ease: 'power3.out'
     });
 
-    // Animate logo
     tl.from('.logo', {
       y: -50,
       opacity: 0,
@@ -30,7 +26,6 @@ const Navbar = () => {
       ease: 'back.out(1.5)'
     }, '-=0.8');
 
-    // Animate nav items with stagger
     tl.from('.navbar-item', {
       y: -30,
       opacity: 0,
@@ -39,7 +34,6 @@ const Navbar = () => {
       ease: 'back.out(1.5)'
     }, '-=0.6');
 
-    // Animate Book Now button
     tl.from('.download-button', {
       y: -30,
       opacity: 0,
@@ -47,10 +41,8 @@ const Navbar = () => {
       ease: 'back.out(1.5)'
     }, '-=0.4');
 
-    // Ensure all elements are visible after timeline completes
     tl.set('.navbar-item, .download-button', { opacity: 1, visibility: 'visible' });
 
-    // Sticky effect on scroll
     ScrollTrigger.create({
       trigger: '.navbar',
       start: 'top top',
@@ -68,7 +60,9 @@ const Navbar = () => {
         <li className='navbar-item'>
           <Link to="/about" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }}>About Us</Link>
         </li>
-        <li className='navbar-item'>Cars</li>
+        <li className='navbar-item'>
+          <Link to="/cars" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }}>Cars </Link>
+        </li>
         {/* <li className='navbar-item'>Features</li> */}
         <li className='navbar-item'>Help</li>
       </ul>
