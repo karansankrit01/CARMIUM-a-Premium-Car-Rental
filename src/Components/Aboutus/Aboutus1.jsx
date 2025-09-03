@@ -32,7 +32,7 @@ const Aboutus1 = () => {
     gsap.to(imgDivRef.current, {
       scrollTrigger: {
         trigger: imgDivRef.current,
-        markers: true,
+
         start: "top 10%",
         end: "top -50%",
         pin: true,
@@ -55,7 +55,9 @@ const Aboutus1 = () => {
             src="https://i.pinimg.com/1200x/91/4f/65/914f65915c1b326fddec00427cbe8079.jpg"
             alt=""
           />
+          
         </div>
+        
       </div>
     </div>
   );

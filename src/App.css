@@ -642,23 +642,24 @@ h3{
   position: absolute;
   overflow: hidden;
   z-index: -1;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   max-width: 100%;
+  width: 320vh;
        /* increase max-width if needed */
-  max-height: 40vh;      /* increase max-height for taller images */
-  height: 80vh;          /* set a larger height */
-  margin-top: -700px;
+  max-height: 90vh;      /* increase max-height for taller images */
+  height: 100vh;          /* set a larger height */
+  margin-top: -500px;
   
 }
 
 .Scrollimage img {
   object-fit: cover;
   width: 160vh;
-  height: 90%;          /* make image fill the container */
+  height: 60%;          /* make image fill the container */
   object-fit: cover;     /* ensures image covers the area */
   display: block;
-  margin-left: 30vh;
+  margin-left: 20vh;
   border-radius: 20px;
   
 }
@@ -670,22 +671,23 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: -200px;
   gap: 50px;
+  overflow: hidden;
 }
 
 
 .about-text {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   max-width: 50%;
   margin: 0 auto;
-  margin-right: 130px;
+  margin-right: 380px;
   text-align: left;
-  color: #333;
+  z-index: 1;
   margin-top: 150px;
-  font-size: 20px;
-  line-height: 1.5;
-
+  font-size: 80px;
+  line-height: 1;
+  font-weight: bolder;
   text-wrap: wrap;
 
 }
@@ -768,4 +770,14 @@ video:hover::-webkit-media-controls-panel {
 video:hover::-webkit-media-controls-enclosure {
   display: none !important;
   opacity: 0 !important;
+}
+.image img{
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  max-width: 100%;
+  width: 80vh;
+  height: auto;
+
+  margin-top: -400px;
 }

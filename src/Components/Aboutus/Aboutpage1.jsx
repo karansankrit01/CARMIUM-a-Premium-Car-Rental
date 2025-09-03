@@ -60,21 +60,23 @@ const Aboutpage1 = () => {
       }
     );
   }, []);
-
+  
   return (
-    <div className="About-container">
-      <div className="imagee">
-        <img src="/car.png" alt="" />
-      </div>
-      <img src="/ownlane.png" alt="" />
-      <h3>Scroll Down for More &darr;</h3>
+    <>
+      <div className="About-container">
       <h1>Redefining the way you experience luxury travel.</h1>
+      <h3>Scroll Down for More &darr;</h3>
+        <div className="imagee">
+          <img src="/car.png" alt="" />
+        </div>
+        <img src="/ownlane.png" alt="" />
 
-      <More/>
+      <More />
       <Aboutus1 />
-      <Mission/>
+      {/* <Mission/> */}
     </div>
-  )
+      </>
+    );
 }
 
 export default Aboutpage1
