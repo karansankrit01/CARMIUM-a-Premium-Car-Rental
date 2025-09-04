@@ -9,14 +9,14 @@ const Footer = () => {
     <>
       <div className="img-section">
         <div className="img-wrapper">
-          <img className='drive-unique' src="driveunique.png" alt="" />
+          <img className='drive-unique' src="red.png" alt="" />
         </div>
         <h1 className='drive-title'>Drive With Unique Today</h1>
       </div>
       <div className="sec">
         <p className='para-text'>
           Book now to explore the world of premium <br />
-          cars - that's exciting!
+          cars and elevate your travel experience.
         </p>
         <button className='download-button'>Book Now</button>
       </div>

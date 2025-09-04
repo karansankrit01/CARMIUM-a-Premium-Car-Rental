@@ -385,8 +385,8 @@ body {
 }
 .feature_heading{
   padding: 5px 90px;
-font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
   color: black;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -396,10 +396,10 @@ font-family: Arial, Helvetica, sans-serif;
 .feature_heading1{
   padding: 5px 90px;
   font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 15px;
   color: black;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 5px;
 }
 .card{
@@ -415,16 +415,16 @@ font-family: Arial, Helvetica, sans-serif;
   z-index: -1;
   display: inline-block;
   width: 250px;
-  height: 250px;
-  border: #00000022 1px solid;
-  /* background-color: red; */
+  height: 200px;
+  border: #000000d7 1px solid;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.751);
   border-radius: 20px;
 }
 .co_card img {
   margin-top: 15px;
   padding: 10px;
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  height: 25%;
   border-radius: 70%;
   object-fit: cover;
   
@@ -432,7 +432,7 @@ font-family: Arial, Helvetica, sans-serif;
 .co_card .text {
   font-family: "Manrope", sans-serif;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 15px;
   color: black;
   text-align: bottom;
   padding: 15px;
@@ -467,7 +467,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .drive-title{
-  color: white;
+  color: black;
   font-family: "Manrope", sans-serif;
   font-weight: 800;
   font-size: 80px;
@@ -478,7 +478,7 @@ font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0  , 0, 0.5);
 }
 .para-text{
-  color: white;
+  color: greenyellow;
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -613,6 +613,7 @@ input[type='text']:focus {
   font-style: italic;
   transform: matrix(1, -0.1, 0, 1, 0, 0);
 }
+
 h3{
   margin-top: 50px;
   font-size: 10px;
@@ -703,7 +704,6 @@ h3{
   white-space: nowrap;         
   box-sizing: border-box;
 }
-
 
 
 .mission-title{
