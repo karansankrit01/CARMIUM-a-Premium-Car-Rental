@@ -59,6 +59,18 @@ const Aboutpage1 = () => {
         },
       }
     );
+    gsap.fromTo(".About-container .highlight", { opacity: 0, y: 30 }, {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".About-container .highlight", 
+        start: "center center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
   }, []);
   
   return (
@@ -70,6 +82,10 @@ const Aboutpage1 = () => {
           <img src="/car.png" alt="" />
         </div>
         <img src="/ownlane.png" alt="" />
+
+        <h1 className='highlight'>It doesn't matter if you win by an inch or a mile,
+         winning is winning.
+        </h1>
 
       <More />
       <Aboutus1 />
