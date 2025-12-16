@@ -1,56 +1,61 @@
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap";
-// import ScrollTrigger from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import LocomotiveScroll from 'locomotive-scroll';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Page1 = () => {
-        useGSAP(() => {
-                gsap.from('.page1-title', {
-                        
-                    y: -100,
-                    opacity: 0,
-                    duration: 1,
-                    stagger: 0.2,
-                })
-                gsap.from('.page1-description', {
-                        scrollTrigger: {
-                                trigger: '.page1',
-                                start: 'top top',
-                                end: 'bottom bottom',
-                                y:100,
-                                opacity:0,
-                                duration:1,
-                                scrub: true,
+  const navigate = useNavigate();
 
-                        },
-                    y: 50,
-                    opacity: 0,
-                    duration: 1,
-                    stagger: 0.2,
-                })
-        })                      
-    return (
-        <>
-        <div className='page1'>
-                <div className='img-container'>
-                <img src="app.png" alt="app img" />
-                </div>
-                <div className='text-container'>
-                        <h1 className='page1-title'>Welcome to Carmium</h1>
-                        <p className='page1-description'>We developed a simple and functional car rental <br />
-                         service.
-                                it is built in such a way as simplify the process of <br />
-                                 renting a car.
-                                We have a wide range of cars to choose from, <br />
-                                 including luxury and economy models.
-                                view the location, statement <br />and  
-                                other information about each of the vehiclel in one click.
-                        </p>
-                </div>
+  const handleShowAllClick = () => {
+    navigate('/show-all');
+  };
+
+  return (
+    <>
+      <div className="page1">
+        <p className='para'>only the best cars</p>
+        <h1 className="page1_heading">Our Vehicle Fleet</h1>
+        <p className='paragraph'>
+          We provide our customer with most incredible driving emotions. <br />
+          That's why we have only world-class cars in our fleet.
+        </p>
+
+        <div className="button-wrapper">
+          <div className="button-group">
+            <button className="fleet-btn">Premium</button>
+            <button className="fleet-btn">Coupe</button>
+            <button className="fleet-btn active">Hypercars</button>
+            <button className="fleet-btn">Sportcar</button>
+            <button className="fleet-btn">Cabriolet</button>
+            <button className="fleet-btn">Limousines</button>
+          </div>
         </div>
-        </>
-    )
-}
+        <div className="vehicles">
+          <div className="vehicle">
+            <img src="/hyper2.jpeg" alt="Vehicle 1" />
+          </div>
+          <div className="vehicle">
+            <img src="/hyper1.jpeg" alt="Vehicle 2" />
+          </div>
+          <div className="vehicle">
+            <img src="/hyper3.jpeg" alt="Vehicle 3" />
+          </div>
+          <div className="vehicle">
+            <img src="/hyper4.jpeg" alt="Vehicle 4" />
+          </div>
+          <div className="vehicle">
+            <img src="/hyper5.jpeg" alt="Vehicle 5" />
+          </div>
+          <div className="vehicle">
+            <img src="/hyper6.jpeg" alt="Vehicle 6" />
+          </div>
+        </div>
+        <div className="show-all-button" onClick={handleShowAllClick}>
+          Show All (83 Models) &rarr;
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Page1
+export default Page1;
